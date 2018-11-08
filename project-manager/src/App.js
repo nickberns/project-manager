@@ -72,10 +72,11 @@ class App extends Component {
     return (
       <div className="App">
 
-       <h3>Project Manager App</h3>
-       <AddProject addProject={this.handleAddProject.bind(this)}/>
+      <h3>Project Manager App</h3>
+      <AddProject addProject={this.handleAddProject.bind(this)}/>
+      <hr />
       <Projects projects={this.state.projects} onDelete={this.handleDeleteProject.bind(this)}/>
-      <hr  />
+      <hr  />      
       <Todos todos={this.state.todos} />
       </div>
     );

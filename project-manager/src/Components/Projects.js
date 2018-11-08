@@ -23,7 +23,10 @@ class Projects extends Component {
 
     return (
       <div className="Projects">
+      <h3>Completed Projects</h3>
+      <ul>
         {projectItems}
+      </ul>
       </div>
     );
   }

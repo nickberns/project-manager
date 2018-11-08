@@ -21,7 +21,9 @@ class Todos extends Component {
     return (
       <div className="Todos">
       <h3>Todo List</h3>
+      <ul>
         {todoItems}
+      </ul>
       </div>
     );
   }
