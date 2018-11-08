@@ -1,4 +1,6 @@
 import React, { Component } from 'react';
+import uuid from 'uuid';
+
 
 class AddProject extends Component {
   constructor(){
@@ -19,6 +21,7 @@ static defaultProps={
     }
     else{
       this.setState({newProject:{
+        id: uuid.v4(),
         title: this.refs.title.value,
         category: this.refs.category.value
       }}, function(){
@@ -33,20 +36,19 @@ static defaultProps={
     });
     return(
       <div>
-        <h3>Add Project</h3>
           <form onSubmit={this.handleSubmit.bind(this)}>
             <div>
-              <label>Title</label><br />
+              <label>Title:</label><br />
               <input type="text" ref="title" />
             </div>
             <div>
-              <label>Category</label><br />
+              <label>Category:</label><br />
               <select ref="category">
                 {categoryOptions}
               </select>
             </div>
-            <input type="submit" value="Submit" />
-          </form>
+            <input type="submit" value="Add" />
+          </form><br />
       </div>
     );
     }
